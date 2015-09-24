@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ assignProxy(){
+   PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy no_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY NO_PROXY ALL_PROXY"
+   for envar in $PROXY_ENV
+   do
+     export $envar=$1
+   done
+ }
+
+ proxyOff(){
+   assignProxy "" # This is what 'unset' does.
+ }
+
+ proxyOn(){
+   proxy_value="http://proxy.wdf.sap.corp:8080"
+   assignProxy $proxy_value  
+ }
+

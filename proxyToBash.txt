@@ -1,0 +1,7 @@
+add
+
+if [ -f ~/.bash_proxy ]; then
+    . ~/.bash_proxy
+fi
+
+to .bashrc
