@@ -1,7 +1,8 @@
 add
 
+proxy=http://proxy:8080
 if [ -f ~/.bash_proxy ]; then
-    . ~/.bash_proxy
+    . ~/.bash_proxy $proxy
 fi
 
 to .bashrc
