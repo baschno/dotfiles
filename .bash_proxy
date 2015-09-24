@@ -14,6 +14,17 @@
 
  proxyOn(){
    proxy_value="http://proxy.wdf.sap.corp:8080"
-   assignProxy $proxy_value  
+   assignProxy $proxy_value
  }
 
+ proxy () {
+   case "$1" in
+     on)
+     echo "Set proxy enabled..."
+      proxyOn ;;
+
+     off)
+     echo "Set proxy disabled..."
+     proxyOff ;;
+   esac
+ }
