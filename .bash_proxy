@@ -1,15 +1,29 @@
 #!/bin/bash
 
  assignProxy(){
-   PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy no_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY NO_PROXY ALL_PROXY"
+   PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
    for envar in $PROXY_ENV
    do
      export $envar=$1
+   done
+
+   #set no proxy
+   export no_proxy=*.local,127.0.0.1,169.254/16,localhost,/var/run/docker.sock
+   export NO_PROXY=*.local,127.0.0.1,169.254/16,localhost,/var/run/docker.sock
+ }
+
+ assignNoProxy(){
+   #set no proxy
+   PROXY_ENV="no_proxy NO_PROXY"
+   for envar in $PROXY_ENV
+   do
+     export $envar=*.local,127.0.0.1,169.254/16,localhost,/var/run/docker.sock
    done
  }
 
  proxyOff(){
    assignProxy "" # This is what 'unset' does.
+   assignNoProxy
  }
 
  proxyOn(){
