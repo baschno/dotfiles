@@ -1,4 +1,9 @@
-#add rows to .bashrc -> cat addRowsToBashRc.txt >> .bashrc
+
+
+# add rows to .bashrc -> cat addRowsToBashRc.txt >> .bashrc
+# don't remove the upper CR/LF other wise it will be appended to a line
+# and not as new line
+
 proxy=http://proxy:8080
 if [ -f ~/.bash_proxy ]; then
     . ~/.bash_proxy $proxy
