@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # load fzf key-bindings and completions if installed
 if 
