@@ -26,3 +26,4 @@ export PROFILE_NAME="Chameleon"
 # =============================================================== #
 
 ~/dotfiles/elementary-apply-colors.sh
+ 
