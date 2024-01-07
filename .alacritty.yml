@@ -8,6 +8,10 @@ colors:
 
   cursor:
     cursor: '#97979b'
+    style:
+      shape: Beam
+      blinking: On
+    unfocused_hollow: false
 
   selection:
     text:       '#282a36'
@@ -34,6 +38,8 @@ colors:
     white:   '#eff0eb'
 
 window:
+  opacity: 0.95
+  dynamic_padding: true
   dimensions:
     columns: 120
     lines: 50
