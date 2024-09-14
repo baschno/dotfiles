@@ -6,7 +6,7 @@ program = "/usr/bin/zsh"
 style = "Beam"
 
 [font]
-size = 16.0
+size = 13.0
 
 [font.normal]
 family = "CodeNewRoman Nerd Font"
@@ -14,7 +14,7 @@ family = "CodeNewRoman Nerd Font"
 [window]
 startup_mode = "Windowed"
 dynamic_padding = true
-opacity = 0.95
+opacity = 0.97
 
 [window.padding]
 x = 6
@@ -22,7 +22,7 @@ y = 0
 
 [window.dimensions]
 columns = 140
-lines = 50
+lines = 46
 
 [colors.normal]
 black = "#21222c"
