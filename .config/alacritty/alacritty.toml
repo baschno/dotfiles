@@ -7,7 +7,7 @@ args = ['--login']
 program = "/usr/bin/zsh"
 
 [cursor]
-style = "Beam"
+style = "block"
 
 [font]
 size = 13.0
