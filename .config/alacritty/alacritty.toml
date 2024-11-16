@@ -1,8 +1,9 @@
+[general]
 import = [
     "~/.config/alacritty/themes/themes/solarized_dark.toml"
 ]
 
-[shell]
+[terminal.shell]
 args = ['--login']
 program = "/usr/bin/zsh"
 
