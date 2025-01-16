@@ -116,3 +116,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
 export KUBECONFIG=~/.kube/k3s-config1
+
+source <(kubectl completion zsh)
+
