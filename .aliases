@@ -3,8 +3,6 @@ alias ls=eza
 alias la='eza -A'
 alias l='ls -CF'
 
-alias cat=bat
-
 alias cdpro='cd ~/Projects'
 alias cdgit='cd ~/Projects/git'
 alias ..='cd ..'

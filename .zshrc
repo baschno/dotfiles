@@ -113,6 +113,20 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
+
 source ~/.aliases
 
 export KUBECONFIG=~/.kube/k3s-config1

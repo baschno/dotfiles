@@ -1,6 +1,11 @@
+[env]
+TERM = "xterm-256color"
+
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/solarized_dark.toml"
+#    "~/.config/alacritty/themes/themes/solarized_dark.toml"
+    "~/.config/alacritty/themes/themes/dark_plus.toml"
+    #"~/.config/alacritty/themes/themes/carbonfox.toml"
 ]
 
 [terminal.shell]
@@ -19,11 +24,11 @@ family = "CodeNewRoman Nerd Font"
 [window]
 startup_mode = "Windowed"
 dynamic_padding = true
-opacity = 0.97
+opacity = 0.96
 
 [window.padding]
-x = 6
-y = 0
+x = 10
+y = 10
 
 [window.dimensions]
 columns = 140
