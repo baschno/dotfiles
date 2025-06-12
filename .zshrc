@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf-zsh-plugin zsh-autosuggestions)
+plugins=(git fzf-zsh-plugin zsh-autosuggestions battery)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,6 +130,8 @@ bindkey "^[[B" history-search-forward
 source ~/.aliases
 
 export KUBECONFIG=~/.kube/k3s-config1
+export KUBECONFIG=~/.kube/k3s-prod
 
-source <(kubectl completion zsh)
-
+. <(kubectl completion zsh)
+. <(kubebuilder completion zsh)
+. <(operator-sdk completion zsh)
