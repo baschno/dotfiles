@@ -135,3 +135,8 @@ export KUBECONFIG=~/.kube/k3s-prod
 . <(kubectl completion zsh)
 . <(kubebuilder completion zsh)
 . <(operator-sdk completion zsh)
+. <(flux completion zsh)
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /snap/terraform/830/terraform terraform
