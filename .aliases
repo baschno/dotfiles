@@ -11,5 +11,3 @@ alias k=kubectl
 
 alias gs='git status'
 
-alias update='sudo apt update && sudo apt upgrade && snap refresh && flatpak update'
-

@@ -43,6 +43,7 @@ bindkey "^[[B" history-search-forward
 export KUBECONFIG=~/.kube/config
 eval "$(~/.local/bin/mise activate zsh)"
 
+source ~/.functions.sh
 source ~/.aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
