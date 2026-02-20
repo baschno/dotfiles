@@ -1,6 +1,6 @@
-alias ll='eza -alF'
-alias ls=eza
-alias la='eza -A'
+#alias ll='eza -alF'
+#alias ls=eza
+#alias la='eza -A'
 alias l='ls -CF'
 
 alias cdpro='cd ~/Projects'

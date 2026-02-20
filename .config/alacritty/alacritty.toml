@@ -3,8 +3,8 @@ TERM = "xterm-256color"
 
 [general]
 import = [
-#    "~/.config/alacritty/themes/themes/solarized_dark.toml"
-    "~/.config/alacritty/themes/themes/dark_plus.toml"
+    "~/.config/alacritty/themes/themes/solarized_dark.toml"
+#    "~/.config/alacritty/themes/themes/dark_plus.toml"
     #"~/.config/alacritty/themes/themes/carbonfox.toml"
 ]
 
@@ -19,7 +19,8 @@ style = "block"
 size = 13.0
 
 [font.normal]
-family = "CodeNewRoman Nerd Font"
+family = "MesloLGS Nerd Font Mono"
+#family = "CodeNewRoman Nerd Font"
 
 [window]
 startup_mode = "Windowed"
