@@ -20,7 +20,7 @@ program = "/usr/bin/zsh"
 style = "block"
 
 [font]
-size = 12.0
+size = 13.0
 
 [font.normal]
 family = "MesloLGS Nerd Font Mono"
