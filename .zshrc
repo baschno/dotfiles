@@ -49,6 +49,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 autoload -Uz compinit
 compinit
+export KUBECONFIG=~/.kube/config
 
 . <(kubectl completion zsh)
 #. <(kubebuilder completion zsh)
@@ -56,3 +57,7 @@ compinit
 #. <(flux completion zsh)
 eval "$(starship init zsh)"
 
+eval "$(zoxide init --cmd cd zsh)"
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/basti/.pulumi/bin
