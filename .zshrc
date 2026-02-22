@@ -41,7 +41,6 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 export KUBECONFIG=~/.kube/config
-eval "$(~/.local/bin/mise activate zsh)"
 
 source ~/.functions.sh
 source ~/.aliases
@@ -56,8 +55,8 @@ export KUBECONFIG=~/.kube/config
 #. <(operator-sdk completion zsh)
 #. <(flux completion zsh)
 eval "$(starship init zsh)"
-
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/basti/.pulumi/bin
