@@ -9,7 +9,7 @@ function update() {
             echo "dnf"
             sudo dnf upgrade
             ;;
-        "ubuntu")
+        "ubuntu" | "elementary")
             echo "apt"
             sudo apt update && sudo apt upgrade -y
             ;;
