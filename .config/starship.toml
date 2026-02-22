@@ -24,6 +24,7 @@ $python\
 $docker_context\
 $conda\
 $pixi\
+$kubernetes\
 [](fg:color_bg3 bg:color_bg1)\
 $time\
 [ ](fg:color_bg1)\
@@ -161,6 +162,13 @@ format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 [pixi]
 style = "bg:color_bg3"
 format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
+
+[kubernetes]
+format = '[ ⛵ ($cluster in )$context \($namespace\)](fg:#83a598 bg:color_bg3)'
+disabled = false
+contexts = [
+  { context_pattern = "dev.local.cluster.k8s", style = "green", symbol = "💔 " },
+]
 
 [time]
 disabled = false
