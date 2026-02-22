@@ -50,6 +50,7 @@ style = "bg:color_orange fg:color_fg0"
 
 [os.symbols]
 Windows = "󰍲"
+Elementary = ""
 Ubuntu = "󰕈"
 SUSE = ""
 Raspbian = "󰐿"
@@ -164,7 +165,7 @@ style = "bg:color_bg3"
 format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
 
 [kubernetes]
-format = '[ ⛵ ($cluster in )$context \($namespace\)](fg:#83a598 bg:color_bg3)'
+format = '[ 󱃾 ($cluster in )$context \($namespace\)](fg:#83a598 bg:color_bg3)'
 disabled = false
 contexts = [
   { context_pattern = "dev.local.cluster.k8s", style = "green", symbol = "💔 " },
