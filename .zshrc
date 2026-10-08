@@ -40,6 +40,23 @@ setopt hist_verify
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
+# Home/End/Ctrl+Left/Ctrl+Right/Delete are only bound automatically by
+# frameworks like Oh My Zsh's lib/key-bindings.zsh; plain zsh leaves them
+# unbound. Bind the common sequence variants so they work across terminals.
+bindkey "^[[H" beginning-of-line
+bindkey "^[[1~" beginning-of-line
+bindkey "^[OH" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[OF" end-of-line
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[5C" forward-word
+bindkey "^[[5D" backward-word
+
+bindkey "^[[3~" delete-char
+
 export KUBECONFIG=~/.kube/config
 
 source ~/.functions.sh
@@ -55,7 +72,6 @@ export KUBECONFIG=~/.kube/config
 #. <(operator-sdk completion zsh)
 #. <(flux completion zsh)
 eval "$(starship init zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
 # add Pulumi to the PATH
@@ -63,3 +79,6 @@ export PATH=$PATH:/home/basti/.pulumi/bin
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# zoxide wants to be initialized last
+eval "$(zoxide init --cmd cd zsh)"
